@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    background-color: blueviolet;
+}
+
+h1{
+    margin-left: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button{
+    width: 150px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+img{
+    width: 25px;
+    height: 25px;
+}
