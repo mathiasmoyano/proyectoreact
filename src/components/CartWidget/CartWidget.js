@@ -2,7 +2,7 @@ import cart from './assets/cart.png'
 
 const CardWidget = () => {
     return (
-        <div>
+        <div className='cartcontainer'>
             <img src={cart} alt='cart'/>
             6
         </div>

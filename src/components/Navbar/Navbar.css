@@ -5,7 +5,7 @@ nav {
     justify-content: space-between;
     width: 100%;
     height: 100px;
-    background-color: blueviolet;
+    background-color: #3B8AC3;
 }
 
 h1{
@@ -13,13 +13,21 @@ h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-button{
+h2{
+    margin-top: 250px;
+}
+.btn{
     width: 150px;
-    margin-right: 20px;
-    margin-left: 20px;
+    border: 1px solid black !important;
+    margin-right: 25px;
 }
 
-img{
+.cartcontainer{
+    margin-right: 25px;
+}
+
+.cartcontainer img{
     width: 25px;
     height: 25px;
+    margin-right: 5px;
 }
