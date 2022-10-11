@@ -1,15 +1,15 @@
-import './Navbar.css'
+import './Navbar.scss'
 import CardWidget from '../CartWidget/CartWidget'
 
 const Navbar = () => {
     return (
         <nav>
-            <h1>Parkbedidas</h1>
-            <div className='botones'>
-                <button className='btn'>Inicio</button>
-                <button className='btn'>Productos</button>
-                <button className='btn'>Contact Us</button>
-            </div>
+            <img src='/images/Logo.png' alt='Logo'/>
+            <ul>
+            <li><a href="Laptops.html">Laptops</a></li>
+            <li><a href="Teclados.html">Teclados</a></li>
+            <li><a href="Mouses.html">Mouses</a></li>
+            </ul>
             <CardWidget />
         </nav>
     )
