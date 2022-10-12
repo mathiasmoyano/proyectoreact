@@ -1,5 +1,6 @@
 import cart from './assets/cart.png'
 
+
 const CardWidget = () => {
     return (
         <div className='cartcontainer'>

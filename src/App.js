@@ -1,20 +1,27 @@
-import React from 'react'; 
+import React from 'react';
 import './App.scss'
 import { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetail from './components/ItemDetail/ItemDetail';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+
 
 
 
 function App() {
-  const [page, setPage] = useState('list')
 
   return (
     <div className="App">
-      <Navbar />
-      {page === 'list' && <ItemListContainer greeting={'Hola aqui voy a vender vinos'}/>}
-      {page === 'detail' && <ItemDetail/>}
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/detail/:productId' element={<ItemDetailContainer />} />
+          
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

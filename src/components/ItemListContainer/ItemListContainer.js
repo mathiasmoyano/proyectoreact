@@ -21,8 +21,6 @@ const ItemListContainer = ({ greeting }) => {
         <span className='loader-inner'></span>
     </span>
     }
-
-
     return (
         <div>
             <h2>Listado de productos</h2>

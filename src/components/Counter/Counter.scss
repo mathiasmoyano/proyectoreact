@@ -1,35 +1,36 @@
 .divcontador {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 
     .btn-container {
+        display: flex;
+        flex-direction: row;
         .btnrestar {
             width: 35px;
-            margin-right: 5px;
-            border: 1px solid black;
+            border: 1px solid #3A7B99;
             border-radius: 15px;
-            background: #ecedf8;
-            box-shadow: inset 1px 1px 2px #c6c7d0, inset -1px -1px 2px #ffffff;
+            color: #3A7B99;
+            background: #FCF7F4;
         }
 
         .btnsumar {
             width: 35px;
-            border: 1px solid black;
+            border: 1px solid #3A7B99;
             border-radius: 15px;
-            background: #ecedf8;
-            box-shadow: inset 1px 1px 2px #c6c7d0, inset -1px -1px 2px #ffffff;
+            color: #3A7B99;
+            background: #FCF7F4;
         }
     }
 
     .btnagrcarrito {
         width: 150px;
-        margin-top: 5px;
+        margin: 0 15px 0 15px;
         font-size: 14px;
-        border: 1px solid black;
+        border: 1px solid #3A7B99;
         border-radius: 15px;
-        background: #ecedf8;
-        box-shadow: inset 1px 1px 2px #c6c7d0, inset -1px -1px 2px #ffffff;
+        color: #3A7B99;
+        background: #FCF7F4;
     }
 
     h2 {
@@ -38,8 +39,8 @@
     }
 
     h3 {
-        margin: 0;
-        font-size: 20px;
+        margin: 0 7px 0 7px;
+        font-size: 18px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-variant-numeric: tabular-nums;
     }
