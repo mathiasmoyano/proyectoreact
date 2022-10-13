@@ -1,9 +1,11 @@
 import { useState } from "react";
 import './Counter.scss'
 
-const Counter = ({onAdd}) => {
-    const [count, setCount] = useState(0)
+let stock = 4;
 
+const Counter = ({onAdd}) => {
+    
+    const [count, setCount] = useState(0)
     const restar = () => {
         if (count > 0) {
             setCount(count - 1)
@@ -11,7 +13,9 @@ const Counter = ({onAdd}) => {
     }
 
     const increment = () => {
+        if (count < stock){
         setCount(count + 1)
+        }
     }
 
     return (

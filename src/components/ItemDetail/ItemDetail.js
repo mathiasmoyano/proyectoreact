@@ -4,7 +4,7 @@ import Counter from '../Counter/Counter'
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     const handleOnAdd = (quantity) => {
         const productToAdd = {
-            id, name, price, quantity
+            id, name, price, quantity, stock,
         }
         console.log(productToAdd)
     }
@@ -13,17 +13,17 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
         <article className='CardItem'>
             <div className='imgcontainer'>
                 <img src={img} alt={name} className="ItemImg" />
-                <div class="valoracion">
+                <div className='valoracion'>
                     <input id="radio5" type="radio" name="estrellas" value="1" />
-                    <label for="radio5">★</label>
+                    <label htmlFor="radio5">★</label>
                     <input id="radio4" type="radio" name="estrellas" value="2" />
-                    <label for="radio4">★</label>
+                    <label htmlFor="radio4">★</label>
                     <input id="radio3" type="radio" name="estrellas" value="3" />
-                    <label for="radio3">★</label>
+                    <label htmlFor="radio3">★</label>
                     <input id="radio2" type="radio" name="estrellas" value="4" />
-                    <label for="radio2">★</label>
+                    <label htmlFor="radio2">★</label>
                     <input id="radio1" type="radio" name="estrellas" value="5" />
-                    <label for="radio1">★</label>
+                    <label htmlFor="radio1">★</label>
                 </div>
                 <p>valoración</p>
             </div>

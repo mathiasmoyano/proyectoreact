@@ -1,15 +1,19 @@
 import './Navbar.scss'
 import CardWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <nav>
+        <nav className='NavBar'>
+            <Link to={'/'}>
             <img src='/images/Logo.png' alt='Logo'/>
-            <ul>
-            <li><a href="Laptops.html">Laptops</a></li>
-            <li><a href="Teclados.html">Teclados</a></li>
-            <li><a href="Mouses.html">Mouses</a></li>
-            </ul>
+            </Link>
+            <div className='Categories'>
+            <Link to={'/category/Asus'} className='Option'>Asus</Link>
+            <Link to={'/category/Lenovo'} className='Option'>Lenovo</Link>
+            <Link to={'/category/Gigabyte'} className='Option'>Gygabyte</Link>
+            <Link to={'/category/HP'} className='Option'>HP</Link>
+            </div>
             <CardWidget />
         </nav>
     )
