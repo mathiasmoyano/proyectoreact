@@ -9,9 +9,9 @@ const Navbar = () => {
             <img src='/images/Logo.png' alt='Logo'/>
             </Link>
             <div className='Categories'>
-            <Link to={'/category/Asus'} className='Option'>Asus</Link>
-            <Link to={'/category/Lenovo'} className='Option'>Lenovo</Link>
-            <Link to={'/category/Gigabyte'} className='Option'>Gygabyte</Link>
+            <Link to={'/category/Asus'} className='Option'>ASUS</Link>
+            <Link to={'/category/Lenovo'} className='Option'>LENOVO</Link>
+            <Link to={'/category/Gigabyte'} className='Option'>GYGABYTE</Link>
             <Link to={'/category/HP'} className='Option'>HP</Link>
             </div>
             <CardWidget />
