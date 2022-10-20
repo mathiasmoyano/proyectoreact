@@ -25,14 +25,21 @@ const ItemListContainer = ({ greeting }) => {
         })
     }, [categoryId])
 
+/*     useEffect(() =>{
+        const onResize = () => console.log('cambie de tamaño')
+        
+        window.addEventListener('resize', onResize)
+
+        return () => window.removeEventListener ('resize', onResize)
+    }, []) */
+
     if(loading){
         return <span className='loader'>
         <span className='loader-inner'></span>
     </span>
     }
     return (
-        <div>
-            <h2>Listado de productos</h2>
+        <div className='Products'>
             <ItemList products={products}/>
         </div>
     )

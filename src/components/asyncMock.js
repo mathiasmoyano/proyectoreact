@@ -16,6 +16,18 @@ const products = [
     },
     {
         id: '4', name: 'Pavilion HP 2022', price: 'USD$1129', category: 'HP', img: '/images/2022 HP Pavilion Gaming.png', stock: 4, description: '15.6" FHD IPS Laptop, AMD Ryzen 5-5600H (Beats i7-9750H), 8GB RAM, 256GB PCIe SSD, Backlit Keyboard, GeForce GTX 1650, Win 11, Acid Green, 32GB SnowBell USB Card'
+    },
+    {
+        id: '5', name: 'Pavilion HP 2022', price: 'USD$1129', category: 'HP', img: '/images/2022 HP Pavilion Gaming.png', stock: 4, description: '15.6" FHD IPS Laptop, AMD Ryzen 5-5600H (Beats i7-9750H), 8GB RAM, 256GB PCIe SSD, Backlit Keyboard, GeForce GTX 1650, Win 11, Acid Green, 32GB SnowBell USB Card'
+    },
+    {
+        id: '6', name: 'Pavilion HP 2022', price: 'USD$1129', category: 'HP', img: '/images/2022 HP Pavilion Gaming.png', stock: 4, description: '15.6" FHD IPS Laptop, AMD Ryzen 5-5600H (Beats i7-9750H), 8GB RAM, 256GB PCIe SSD, Backlit Keyboard, GeForce GTX 1650, Win 11, Acid Green, 32GB SnowBell USB Card'
+    },
+    {
+        id: '7', name: 'Pavilion HP 2022', price: 'USD$1129', category: 'HP', img: '/images/2022 HP Pavilion Gaming.png', stock: 4, description: '15.6" FHD IPS Laptop, AMD Ryzen 5-5600H (Beats i7-9750H), 8GB RAM, 256GB PCIe SSD, Backlit Keyboard, GeForce GTX 1650, Win 11, Acid Green, 32GB SnowBell USB Card'
+    },
+    {
+        id: '8', name: 'Pavilion HP 2022', price: 'USD$1129', category: 'HP', img: '/images/2022 HP Pavilion Gaming.png', stock: 4, description: '15.6" FHD IPS Laptop, AMD Ryzen 5-5600H (Beats i7-9750H), 8GB RAM, 256GB PCIe SSD, Backlit Keyboard, GeForce GTX 1650, Win 11, Acid Green, 32GB SnowBell USB Card'
     }
 
 ]
@@ -24,7 +36,7 @@ export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
-        }, 2000)
+        }, 1500)
     })
 }
 
@@ -32,7 +44,7 @@ export const getProductsById = (id) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.find(prod => prod.id === id))
-        }, 2000)
+        }, 1500)
     })
 }
 

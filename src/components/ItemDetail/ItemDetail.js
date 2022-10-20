@@ -1,12 +1,18 @@
 import './ItemDetail.scss'
 import Counter from '../Counter/Counter'
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 
-const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
+    
+    const {addItem} = useContext(CartContext)
+    
     const handleOnAdd = (quantity) => {
         const productToAdd = {
-            id, name, price, quantity, stock,
+            id, name, price, quantity
         }
-        console.log(productToAdd)
+
+        addItem(productToAdd)
     }
 
     return (

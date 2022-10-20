@@ -1,0 +1,20 @@
+.Footer{
+    width: 100%;
+    height: 100px;
+    background-color: #3A7B99;
+    font-display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 25px;
+    img{
+        width: 25px;
+        height: 25px;
+        margin: 25px 14px 0 0;
+    }
+    p{
+        font-size: 14px;
+        margin: 5px;
+        color: #FCF7F4;
+        font-family: 'Mitr', sans-serif;
+    }
+}
