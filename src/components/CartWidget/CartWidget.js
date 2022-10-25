@@ -1,4 +1,5 @@
 import cart from './assets/cart.png'
+import './CartWidget.scss'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 

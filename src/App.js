@@ -8,27 +8,27 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from './context/CartContext.js';
 import Error404 from './components/error404/error404';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
-
-
+import { NotificationProvider } from './notification/NotificationService';
 
 
 function App() {
   return (
     <div className="App">
-      <CartProvider>
-        <BrowserRouter>
-          <Navbar />
-          <Header />
-          <Routes>
-            <Route path='/' element={<ItemListContainer />} />
-            <Route path='/category/:categoryId' element={<ItemListContainer />} />
-            <Route path='/detail/:productId' element={<ItemDetailContainer />} />
-            <Route path='*' element={<Error404 />} />
-          </Routes>
-          <Footer/>
-        </BrowserRouter>
-      </CartProvider>
+      <NotificationProvider>
+        <CartProvider>
+          <BrowserRouter>
+            <Navbar />
+            <Header />
+            <Routes>
+              <Route path='/' element={<ItemListContainer />} />
+              <Route path='/category/:categoryId' element={<ItemListContainer />} />
+              <Route path='/detail/:productId' element={<ItemDetailContainer />} />
+              <Route path='*' element={<Error404 />} />
+            </Routes>
+            <Footer />
+          </BrowserRouter>
+        </CartProvider>
+      </NotificationProvider>
     </div>
   );
 }

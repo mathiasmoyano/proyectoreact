@@ -2,10 +2,12 @@ import './ItemDetail.scss'
 import Counter from '../Counter/Counter'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
+import { NotificationContext } from '../../notification/NotificationService'
 
 const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
     
     const {addItem} = useContext(CartContext)
+    const { setNotification } = useContext(NotificationContext)
     
     const handleOnAdd = (quantity) => {
         const productToAdd = {
@@ -13,6 +15,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
         }
 
         addItem(productToAdd)
+        setNotification('success', `Se agrego correctamente ${quantity} ${name}`)
     }
 
     return (
