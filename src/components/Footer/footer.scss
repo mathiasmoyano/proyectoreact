@@ -7,17 +7,6 @@
     text-align: center;
     margin-top: 25px;
     position: absolute;
-    img{
-        width: 25px;
-        height: 25px;
-        margin: 25px 14px 0 0;
-        &:hover{
-            -webkit-transform: scale(1.3);
-                transform: scale(1.3);
-            -webkit-transition: 0.5s;
-                transition: 0.5s;
-    }
-    }
     p{
         font-size: 14px;
         margin: 5px;

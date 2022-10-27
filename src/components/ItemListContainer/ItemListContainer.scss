@@ -6,7 +6,8 @@
         margin-top: 25px;
         border: 1px solid #2c3e50;
         border-radius: 45px;
-        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+        box-shadow:  5px 5px 10px #e8e8e8,
+        -5px -5px 10px #ffffff;
 
         .card-img {
             padding: 25px;
@@ -20,7 +21,7 @@
         h5 {
             color: #FCF7F4;
             font-size: 14px;
-            margin: 0 30px 0 30px;
+            margin: 0 25px 0 25px;
             border: 1px solid #3A7B99;
             border-radius: 25px;
             background-color: #3A7B99;

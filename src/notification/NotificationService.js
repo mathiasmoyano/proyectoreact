@@ -1,21 +1,16 @@
 import { useState,createContext } from "react";
+import './NotificationService.scss'
+
 
 const Notification = ({message, severity}) =>{
     const notificationStyles = {
-      position: 'absolute',
-      top: 220,
-      right: 550,
-      width: 'auto',
-      height: 'auto',
       backgroundColor: severity === 'success' ? 'green' : 'red',
-      color: 'white',
-      padding: '10px 20px 10px 20px'
     }
 
     if(message === '') return
 
     return (
-      <div style={notificationStyles}>
+      <div className='NotificationCloud' style={notificationStyles}>
         {message}
       </div>
     )

@@ -4,6 +4,7 @@ export const CartContext = createContext()
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
     const [TotalQuantity, setTotalQuantity] = useState(0)
+    const [total, setTotal] = useState(0)
 
     useEffect(() =>{
         const totalQty = getQuantity()
