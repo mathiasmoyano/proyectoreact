@@ -3,20 +3,24 @@ import Counter from '../Counter/Counter'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { NotificationContext } from '../../notification/NotificationService'
+import { Link } from 'react-router-dom'
 
-const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
-    
-    const {addItem} = useContext(CartContext)
+
+const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+
+    const { addItem, isInCart, getProductQuantity } = useContext(CartContext)
     const { setNotification } = useContext(NotificationContext)
-    
+
     const handleOnAdd = (quantity) => {
         const productToAdd = {
-            id, name, price, quantity
+            id, name, price, quantity, img, description
         }
 
         addItem(productToAdd)
         setNotification('success', `Se agrego correctamente ${quantity} ${name}`)
     }
+
+    const quantityAdded = getProductQuantity(id)
 
     return (
         <article className='CardItem'>
@@ -41,11 +45,15 @@ const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
                     {name}
                 </h2>
                 <p>{category}</p>
-                <p>{description}</p>
+                <p>Descripción: {description}</p>
                 <p>Stock: {stock}</p>
-                <p>{price}</p>
+                <p>USD$ {price}</p>
                 <footer className='ItemFooter'>
-                    <Counter onAdd={handleOnAdd} stock={stock} />
+                    {
+/*                         !isInCart(id) */
+                        <Counter onAdd={handleOnAdd} stock={stock} initial={quantityAdded}/>
+/*                         : <Link to='/cart' className='Option'>Finalizar compra</Link> */
+                    }
                 </footer>
             </div>
         </article>

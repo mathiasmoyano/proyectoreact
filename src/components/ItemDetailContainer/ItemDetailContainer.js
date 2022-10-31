@@ -14,6 +14,7 @@ const ItemDetailContainer = ({ setCart }) => {
 
     const navigate = useNavigate()
 
+
     useEffect(() => {
         const docRef = doc(db, 'products', productId)
 
