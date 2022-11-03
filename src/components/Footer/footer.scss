@@ -1,4 +1,4 @@
-.Footer{
+.Footer {
     width: 100%;
     height: 100px;
     background-color: #3A7B99;
@@ -7,10 +7,69 @@
     text-align: center;
     margin-top: 25px;
     bottom: 0;
-    p{
+
+    p {
         font-size: 14px;
         margin: 5px;
         color: #FCF7F4;
         font-family: 'Mitr', sans-serif;
+    }
+
+    .btn-flip{
+        margin-top: 15px;
+        opacity: 1;
+        outline: 0;
+        line-height: 40px;
+        position: relative;
+        text-align: center;
+        letter-spacing: 2px;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 14px;
+        font-family: 'Mitr', sans-serif;
+        text-transform: uppercase;
+        color: #3A7B99;
+        background-color: #FCF7F4;
+        border-radius: 30px;
+        border: none;
+        
+        &:hover{
+        
+        &:after{
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
+        }
+        &:before{
+            opacity: 0;
+            transform: translateY(50%) rotateX(90deg);
+        }
+        }
+        
+        &:after{
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        display: block;
+        transition: 0.7s;
+        position: absolute;
+        border-radius: 30px;
+        content: attr(data-back);
+        transform: translateY(-50%) rotateX(90deg);
+        }
+        
+        &:before{
+        top: 0;
+        left: 0;
+        opacity: 1;
+        display: block;
+        padding: 0 30px;
+        line-height: 40px;
+        transition: 0.7s;
+        position: relative;
+        border-radius: 30px;
+        content: attr(data-front);
+        transform: translateY(0) rotateX(0);
+        }
     }
 }

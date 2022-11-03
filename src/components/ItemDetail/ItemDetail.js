@@ -3,12 +3,12 @@ import Counter from '../Counter/Counter'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { NotificationContext } from '../../notification/NotificationService'
-import { Link } from 'react-router-dom'
+
 
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
-    const { addItem, isInCart, getProductQuantity } = useContext(CartContext)
+    const { addItem, getProductQuantity } = useContext(CartContext)
     const { setNotification } = useContext(NotificationContext)
 
     const handleOnAdd = (quantity) => {
@@ -49,11 +49,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                 <p>Stock: {stock}</p>
                 <p>USD$ {price}</p>
                 <footer className='ItemFooter'>
-                    {
-/*                         !isInCart(id) */
-                        <Counter onAdd={handleOnAdd} stock={stock} initial={quantityAdded}/>
-/*                         : <Link to='/cart' className='Option'>Finalizar compra</Link> */
-                    }
+                    {stock !== 0 ? <Counter onAdd={handleOnAdd} stock={stock} initial={quantityAdded} /> : <p>No hay stock de este producto</p>}
                 </footer>
             </div>
         </article>

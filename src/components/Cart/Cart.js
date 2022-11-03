@@ -10,7 +10,10 @@ const Cart = () => {
 
     if(TotalQuantity === 0){
         return(
-            <h1>No se</h1>
+            <div className="Non-products">
+            <h1>No se encontraron productos en el carrito</h1>
+            <img src="/Images/error404.png" alt="errorimg"/>
+            </div>
         )
     }
 
