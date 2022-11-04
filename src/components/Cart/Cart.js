@@ -41,7 +41,7 @@ const Cart = () => {
             <div className="finish">
                 Precio total: USD$ {total}
                 <button className="btn-clear" onClick={() => clearCart()}>Limpiar Carrito</button>
-                <Link to='/checkout' className='Option'><button>Checkout</button></Link>
+                <Link to='/checkout' className='Option'><button>Generar Orden</button></Link>
             </div>
         </div>
     )
