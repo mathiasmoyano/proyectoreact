@@ -19,6 +19,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
         .card-cart {
             display: flex;
             flex-direction: row;
@@ -50,7 +51,7 @@
                     text-transform: lowercase;
                 }
 
-                .prod-price{
+                .prod-price {
                     font-size: 14px;
                     text-transform: capitalize;
                 }
@@ -112,7 +113,8 @@
                 text-decoration: none;
             }
         }
-        button{
+
+        button {
             width: auto;
             height: auto;
             margin-top: 5px;
@@ -140,11 +142,15 @@
     }
 }
 
- .Non-products{
+.Non-products {
     width: 100%;
     height: auto;
     min-height: 600px;
     text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
     h1 {
         font-size: 28px;
         font-family: 'Mitr', sans-serif;
@@ -152,9 +158,36 @@
         text-transform: uppercase;
     }
 
-    img{
+    img {
         width: 300px;
         height: 300px;
         margin-top: 25px;
     }
- }
+
+    
+    .btn-tienda {
+        width: auto;
+        height: auto;
+        margin-top: 15px;
+        font-family: 'Mitr', sans-serif;
+        background: #3A7B99;
+        background-image: -webkit-linear-gradient(top, #3A7B99, #2c3e50);
+        background-image: -moz-linear-gradient(top, #3A7B99, #2c3e50);
+        background-image: -ms-linear-gradient(top, #3A7B99, #2c3e50);
+        background-image: -o-linear-gradient(top, #3A7B99, #2c3e50);
+        background-image: linear-gradient(to bottom, #3A7B99, #2c3e50);
+        -webkit-border-radius: 25;
+        -moz-border-radius: 25;
+        border-radius: 25px;
+        color: #FCF7F4;
+        font-size: 14px;
+        padding: 5px 15px 5px 15px;
+        border: solid #2c3e50 1px;
+        text-decoration: none;
+
+        &:hover {
+            background: #3A7B99;
+            text-decoration: none;
+        }
+    }
+}

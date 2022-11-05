@@ -5,7 +5,7 @@ import './ItemDetailContainer.scss'
 import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../../services/firebase'
 
-const ItemDetailContainer = ({ setCart }) => {
+const ItemDetailContainer = () => {
     const [product, setProduct] = useState()
     const [loading, setLoading] = useState(true)
 

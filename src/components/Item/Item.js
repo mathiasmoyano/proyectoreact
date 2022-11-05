@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom'
-import { useContext } from 'react'
-import { CartContext } from '../../context/CartContext'
 
 const Item = ({id, img, name, category, price}) => {
-    const { addItem } = useContext(CartContext)
     return (
         <div className="card">
             <img src={img} className='card-img' alt={name} />

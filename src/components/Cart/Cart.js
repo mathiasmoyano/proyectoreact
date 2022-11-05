@@ -13,6 +13,7 @@ const Cart = () => {
             <div className="Non-products">
             <h1>No se encontraron productos en el carrito</h1>
             <img src="/Images/error404.png" alt="errorimg"/>
+            <Link to='/'><button className='btn-tienda'>Ir a la Tienda</button></Link>
             </div>
         )
     }
@@ -24,7 +25,7 @@ const Cart = () => {
             <div className="items-container">
                 {
                     cart.map(prod => (
-                        <div className="card-cart">
+                        <div key={prod.id} className="card-cart">
                             <img src={prod.img} alt='producto'/>
                             <div className='card-body'>
                                 <p className="prod-name">{prod.name}</p>

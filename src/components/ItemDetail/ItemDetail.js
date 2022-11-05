@@ -20,6 +20,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
         setNotification('success', `Se agrego correctamente ${quantity} ${name}`)
     }
 
+
     const quantityAdded = getProductQuantity(id)
 
     return (
@@ -46,7 +47,6 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                 </h2>
                 <p>{category}</p>
                 <p>Descripción: {description}</p>
-                <p>Stock: {stock}</p>
                 <p>USD$ {price}</p>
                 <footer className='ItemFooter'>
                     {stock !== 0 ? <Counter onAdd={handleOnAdd} stock={stock} initial={quantityAdded} /> : <p>No hay stock de este producto</p>}
