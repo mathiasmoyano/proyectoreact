@@ -75,7 +75,7 @@ const Checkout = () => {
 
                     setTimeout(() => {
                         navigate('/')
-                    }, 1000)
+                    }, 1500)
 
                     setNotification('success', `id de su orden es: ${orderAdded.id}`)
                 
@@ -115,7 +115,7 @@ const Checkout = () => {
                 <input value={direccion} onChange={(e) => setDireccion(e.target.value)} type="text" className="form-input" placeholder="Dirección" />
                 <label>Detalles*</label>
                 <textarea value={comentarios} onChange={(e) => setComentarios(e.target.value)} type="text" className="form-input" placeholder="Comentarios" />
-                <button className="btn-orden" onClick={createOrder}>Generar Orden</button>
+                <button className="btn-orden" onClick={createOrder}>Pagar</button>
             </div>
         </div>
     )
